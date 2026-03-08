@@ -132,17 +132,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Individuell. Persönlich. Mit Herz.</h2>
-					<p>Ob Gravuren auf Holz, Glas, Schiefer oder kleine Geschenkideen – wir freuen uns auf deine Anfrage.</p>
-					<p><a href="https://herzmade.de" class="btn btn-primary">Zur Startseite</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="cta-placeholder"></div>
 
 <div id="footer-placeholder"></div>
 	</div>
@@ -161,9 +151,16 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
 <script>
+fetch("/cta.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("cta-placeholder").innerHTML = data;
+  });
+
 fetch("/footer.html")
-  .then(response => response.text())
+  .then(res => res.text())
   .then(data => {
     document.getElementById("footer-placeholder").innerHTML = data;
   });
