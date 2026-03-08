@@ -115,32 +115,38 @@
 					</div>
 					<div class="col-md-7 animate-box">
 						<h3>Trete in Kontakt</h3>
-<form id="contactForm">
-	<div class="row form-group">
-		<div class="col-md-12">
-			<label for="fname">Dein Name</label>
-			<input type="text" id="fname" class="form-control" required>
-		</div>
-	</div>
+<form action="https://formspree.io/f/xeeropko" method="POST">
 
-	<div class="row form-group">
-		<div class="col-md-12">
-			<label for="email">Email</label>
-			<input type="email" id="email" class="form-control" required>
-		</div>
-	</div>
+<input type="text" name="_gotcha" style="display:none">
 
-	<div class="row form-group">
-		<div class="col-md-12">
-			<label for="message">Nachricht</label>
-			<textarea id="message" cols="30" rows="10" class="form-control" required></textarea>
-		</div>
+<div class="row form-group">
+	<div class="col-md-12">
+		<label>Dein Name</label>
+		<input type="text" name="name" class="form-control" required>
 	</div>
+</div>
 
-	<div class="form-group">
-		<input type="submit" value="Send Message" class="btn btn-primary">
+<div class="row form-group">
+	<div class="col-md-12">
+		<label>Email</label>
+		<input type="email" name="email" class="form-control" required>
 	</div>
-</form>	
+</div>
+
+<div class="row form-group">
+	<div class="col-md-12">
+		<label>Nachricht</label>
+		<textarea name="message" cols="30" rows="10" class="form-control" required></textarea>
+	</div>
+</div>
+
+<input type="hidden" name="_subject" value="Neue Nachricht von Herzmade.de">
+
+<div class="form-group">
+	<input type="submit" value="Nachricht senden" class="btn btn-primary">
+</div>
+
+</form>
 					</div>
 				</div>
 			</div>
@@ -196,27 +202,6 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-
-	e.preventDefault();
-
-	var name = document.getElementById("fname").value;
-	var email = document.getElementById("email").value;
-	var message = document.getElementById("message").value;
-
-	var subject = encodeURIComponent("Kontakt über Herzmade.de");
-	var body = encodeURIComponent(
-		"Name: " + name + "\n" +
-		"E-Mail: " + email + "\n\n" +
-		"Nachricht:\n" + message
-	);
-
-	window.location.href =
-	"mailto:kontakt@herzmade.de?subject=" + subject + "&body=" + body;
-
-});
-</script>
 	</body>
 </html>
 
