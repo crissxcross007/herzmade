@@ -153,13 +153,13 @@
 	<script src="js/main.js"></script>
 
 <script>
-fetch("/cta.html")
+fetch("cta.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("cta-placeholder").innerHTML = data;
   });
 
-fetch("/footer.html")
+fetch("footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer-placeholder").innerHTML = data;
