@@ -204,6 +204,30 @@ fetch("footer.html")
     document.getElementById("footer-placeholder").innerHTML = data;
   });
 </script>
+
+		 <script>
+    async function loadHolz() {
+      const response = await fetch('./content/holz.json');
+      const data = await response.json();
+
+      document.getElementById('titel').textContent = data.titel || 'Holz';
+      document.getElementById('einleitung').textContent = data.einleitung || '';
+
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
+
+      (data.galerie || []).forEach(item => {
+        const img = document.createElement('img');
+        img.src = item.bild;
+        img.alt = item.alt || item.titel || '';
+        img.style.width = '300px';
+        img.style.margin = '10px';
+        gallery.appendChild(img);
+      });
+    }
+
+    loadHolz().catch(err => console.error(err));
+  </script>
 	</body>
 </html>
 
