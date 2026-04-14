@@ -207,7 +207,7 @@ fetch("footer.html")
 
 		 <script>
     async function loadHolz() {
-      const response = await fetch('./content/holz.json');
+      const response = await fetch('/content/holz.json');
       const data = await response.json();
 
       document.getElementById('titel').textContent = data.titel || 'Holz';
