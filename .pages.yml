@@ -4,6 +4,21 @@ media:
     input: images/holz
     output: /images/holz
 
+  - name: glas
+    label: Glasbilder
+    input: images/glas
+    output: /images/glas
+
+  - name: schiefer
+    label: Schieferbilder
+    input: images/schiefer
+    output: /images/schiefer
+
+  - name: zipper
+    label: Zipperbilder
+    input: images/zipper
+    output: /images/zipper
+
 content:
   - name: holz
     label: Holz
@@ -25,7 +40,11 @@ content:
 
       - name: galerie
         label: Galerie
-        type: list
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
         fields:
           - name: bild
             label: Bild
@@ -39,3 +58,124 @@ content:
           - name: alt
             label: Alternativtext
             type: string
+
+  - name: glas
+    label: Glas
+    type: file
+    path: content/glas.json
+    format: json
+    fields:
+      - name: titel
+        label: Titel
+        type: string
+
+      - name: slug
+        label: Slug
+        type: string
+
+      - name: einleitung
+        label: Einleitung
+        type: text
+
+      - name: galerie
+        label: Galerie
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - name: bild
+            label: Bild
+            type: image
+            media: glas
+
+          - name: titel
+            label: Bildtitel
+            type: string
+
+          - name: alt
+            label: Alternativtext
+            type: string
+
+  - name: schiefer
+    label: Schiefer
+    type: file
+    path: content/schiefer.json
+    format: json
+    fields:
+      - name: titel
+        label: Titel
+        type: string
+
+      - name: slug
+        label: Slug
+        type: string
+
+      - name: einleitung
+        label: Einleitung
+        type: text
+
+      - name: galerie
+        label: Galerie
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - name: bild
+            label: Bild
+            type: image
+            media: schiefer
+
+          - name: titel
+            label: Bildtitel
+            type: string
+
+          - name: alt
+            label: Alternativtext
+            type: string
+
+  - name: zipper
+    label: Zipper
+    type: file
+    path: content/zipper.json
+    format: json
+    fields:
+      - name: titel
+        label: Titel
+        type: string
+
+      - name: slug
+        label: Slug
+        type: string
+
+      - name: einleitung
+        label: Einleitung
+        type: text
+
+      - name: galerie
+        label: Galerie
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - name: bild
+            label: Bild
+            type: image
+            media: zipper
+
+          - name: titel
+            label: Bildtitel
+            type: string
+
+          - name: alt
+            label: Alternativtext
+            type: string
+
+settings:
+  content:
+    merge: true
