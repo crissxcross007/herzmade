@@ -3,28 +3,24 @@ media:
     label: Holzbilder
     input: images/holz
     output: /images/holz
-    rename: safe
     extensions: [jpg, jpeg, png, webp]
 
   - name: glas
     label: Glasbilder
     input: images/glas
     output: /images/glas
-    rename: safe
     extensions: [jpg, jpeg, png, webp]
 
   - name: schiefer
     label: Schieferbilder
     input: images/schiefer
     output: /images/schiefer
-    rename: safe
     extensions: [jpg, jpeg, png, webp]
 
   - name: zipper
     label: Zipperbilder
     input: images/zipper
     output: /images/zipper
-    rename: safe
     extensions: [jpg, jpeg, png, webp]
 
 content:
@@ -32,16 +28,20 @@ content:
     label: Holz
     type: file
     path: content/holz.json
+    format: json
     fields:
       - name: titel
         label: Titel
         type: string
+
       - name: slug
         label: Slug
         type: string
+
       - name: einleitung
         label: Einleitung
         type: text
+
       - name: galerie
         label: Galerie
         type: list
@@ -50,9 +50,11 @@ content:
             label: Bild
             type: image
             media: holz
+
           - name: titel
             label: Bildtitel
             type: string
+
           - name: alt
             label: Alternativtext
             type: string
@@ -61,16 +63,20 @@ content:
     label: Glas
     type: file
     path: content/glas.json
+    format: json
     fields:
       - name: titel
         label: Titel
         type: string
+
       - name: slug
         label: Slug
         type: string
+
       - name: einleitung
         label: Einleitung
         type: text
+
       - name: galerie
         label: Galerie
         type: list
@@ -79,9 +85,11 @@ content:
             label: Bild
             type: image
             media: glas
+
           - name: titel
             label: Bildtitel
             type: string
+
           - name: alt
             label: Alternativtext
             type: string
@@ -90,16 +98,20 @@ content:
     label: Schiefer
     type: file
     path: content/schiefer.json
+    format: json
     fields:
       - name: titel
         label: Titel
         type: string
+
       - name: slug
         label: Slug
         type: string
+
       - name: einleitung
         label: Einleitung
         type: text
+
       - name: galerie
         label: Galerie
         type: list
@@ -108,9 +120,11 @@ content:
             label: Bild
             type: image
             media: schiefer
+
           - name: titel
             label: Bildtitel
             type: string
+
           - name: alt
             label: Alternativtext
             type: string
@@ -119,16 +133,20 @@ content:
     label: Zipper
     type: file
     path: content/zipper.json
+    format: json
     fields:
       - name: titel
         label: Titel
         type: string
+
       - name: slug
         label: Slug
         type: string
+
       - name: einleitung
         label: Einleitung
         type: text
+
       - name: galerie
         label: Galerie
         type: list
@@ -137,9 +155,11 @@ content:
             label: Bild
             type: image
             media: zipper
+
           - name: titel
             label: Bildtitel
             type: string
+
           - name: alt
             label: Alternativtext
             type: string
