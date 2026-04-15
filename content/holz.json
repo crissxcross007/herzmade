@@ -1,12 +1,11 @@
-"galerie": [
-  {
-    "bild": "/images/holz/kachel_ringe_full.png",
-    "titel": "Holzbox",
-    "alt": "Gravierte Holzbox"
-  },
-  {
-    "bild": "/images/holz/neues-bild.png",
-    "titel": "Neues Werkstück",
-    "alt": "Beschreibung des neuen Werkstücks"
-  }
-]
+{
+  "titel": "Holz",
+  "einleitung": "Holz ist warm, natürlich und vielseitig.",
+  "galerie": [
+    {
+      "bild": "/images/holz/kachel_ringe_full.png",
+      "titel": "Ringe",
+      "alt": "Gravierte Ringe auf Holz"
+    }
+  ]
+}
