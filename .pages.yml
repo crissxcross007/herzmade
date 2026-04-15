@@ -19,6 +19,11 @@ media:
     input: images/zipper
     output: /images/zipper
 
+- name: edelstahl
+  label: Edelstahlbilder
+  input: images/edelstahl
+  output: /images/edelstahl
+
 content:
   - name: holz
     label: Holz
@@ -176,6 +181,45 @@ content:
             label: Alternativtext
             type: string
 
-settings:
+- name: edelstahl
+  label: Edelstahl
+  type: file
+  path: content/edelstahl.json
+  format: json
+  fields:
+    - name: titel
+      label: Titel
+      type: string
+
+    - name: slug
+      label: Slug
+      type: string
+
+    - name: einleitung
+      label: Einleitung
+      type: text
+
+    - name: galerie
+      label: Galerie
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: "{titel}"
+      fields:
+        - name: bild
+          label: Bild
+          type: image
+          media: edelstahl
+
+        - name: titel
+          label: Bildtitel
+          type: string
+
+        - name: alt
+          label: Alternativtext
+          type: string
+  
+  settings:
   content:
     merge: true
