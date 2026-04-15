@@ -1,39 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="de">
 <head>
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 	<title>Holz Gravur in Döbern | Herzmade</title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="description" content="Individuelle Gravuren auf Holz von Herzmade aus 03159 Döbern. Personalisierte Geschenkideen und Lasergravuren für Kunden aus Döbern, Forst (Lausitz), Cottbus und Umgebung.">
-
 	<meta name="keywords" content="Holz Gravur Döbern, Lasergravur Holz, personalisierte Geschenke Döbern, Gravur Spree-Neiße, Herzmade">
-
 	<meta name="author" content="Herzmade">
 	<meta name="robots" content="index, follow">
 
-	<link rel="canonical" href="https://herzmade.de/holz.html">
+	<link rel="canonical" href="https://herzmade.de/portfolio_detail.html">
 
-	<!-- OpenGraph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Holz Gravur | Herzmade aus Döbern">
 	<meta property="og:image" content="https://herzmade.de/images/herzmade-social.jpg">
-	<meta property="og:url" content="https://herzmade.de/holz.html">
+	<meta property="og:url" content="https://herzmade.de/portfolio_detail.html">
 	<meta property="og:site_name" content="Herzmade">
 	<meta property="og:description" content="Personalisierte Gravuren auf Holz – individuell gefertigt von Herzmade aus 03159 Döbern.">
 
-	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Holz Gravur | Herzmade aus Döbern">
 	<meta name="twitter:image" content="https://herzmade.de/images/herzmade-social.jpg">
-	<meta name="twitter:url" content="https://herzmade.de/holz.html">
+	<meta name="twitter:url" content="https://herzmade.de/portfolio_detail.html">
 	<meta name="twitter:description" content="Individuelle Lasergravuren auf Holz aus Döbern in der Lausitz.">
 
-	<!-- Strukturierte Daten -->
 	<script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
@@ -49,7 +41,7 @@
 	    "name": "Herzmade",
 	    "url": "https://herzmade.de"
 	  },
-	  "url": "https://herzmade.de/holz.html",
+	  "url": "https://herzmade.de/portfolio_detail.html",
 	  "image": "https://herzmade.de/images/herzmade-social.jpg",
 	  "material": "Holz",
 	  "category": "Lasergravur",
@@ -63,13 +55,11 @@
 	}
 	</script>
 
-	<!-- CSS -->
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Modernizr -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	<!--[if lt IE 9]>
@@ -104,12 +94,10 @@
 			margin: 0;
 		}
 	</style>
-
 </head>
 <body>
-		
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
 		<nav class="fh5co-nav" role="navigation">
 			<div class="container">
@@ -141,7 +129,7 @@
 				</div>
 			</div>
 		</nav>
-	
+
 		<div id="fh5co-author">
 			<div class="container">
 				<div class="row top-line animate-box">
@@ -185,90 +173,103 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
-	<!-- jQuery -->
+
 	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Main -->
 	<script src="js/main.js"></script>
 
 	<script>
-		fetch("footer.html")
-			.then(res => res.text())
-			.then(data => {
-				document.getElementById("footer-placeholder").innerHTML = data;
-			});
+		(function () {
+			var footerPlaceholder = document.getElementById("footer-placeholder");
+			if (footerPlaceholder) {
+				fetch("/footer.html")
+					.then(function (res) { return res.text(); })
+					.then(function (data) {
+						footerPlaceholder.innerHTML = data;
+					})
+					.catch(function (err) {
+						console.error("Footer-Fehler:", err);
+					});
+			}
+
+			var titelEl = document.getElementById("titel");
+			var einleitungEl = document.getElementById("einleitung");
+			var galleryEl = document.getElementById("gallery");
+
+			if (!titelEl || !einleitungEl || !galleryEl) {
+				console.error("Fehlende Elemente: titel, einleitung oder gallery");
+				return;
+			}
+
+			titelEl.textContent = "Holz wird geladen …";
+
+			fetch("/content/holz.json?v=" + new Date().getTime())
+				.then(function (response) {
+					if (!response.ok) {
+						throw new Error("holz.json konnte nicht geladen werden: " + response.status);
+					}
+					return response.json();
+				})
+				.then(function (data) {
+					console.log("JSON geladen:", data);
+
+					titelEl.textContent = data.titel || "Holz";
+					einleitungEl.textContent = data.einleitung || "";
+					galleryEl.innerHTML = "";
+
+					if (!data.galerie || !data.galerie.length) {
+						galleryEl.innerHTML = '<div class="col-md-12"><p>Noch keine Bilder vorhanden.</p></div>';
+						return;
+					}
+
+					data.galerie.forEach(function (item) {
+						var bildPfad = item.bild || "";
+
+						if (bildPfad.indexOf("./") === 0) {
+							bildPfad = "/" + bildPfad.substring(2);
+						}
+
+						var col = document.createElement("div");
+						col.className = "col-md-6 col-sm-6 gallery-item animate-box";
+
+						var card = document.createElement("div");
+						card.className = "gallery-card";
+
+						var img = document.createElement("img");
+						img.src = bildPfad;
+						img.className = "img-responsive";
+						img.alt = item.alt || item.titel || "";
+
+						var caption = document.createElement("div");
+						caption.className = "gallery-caption";
+
+						if (item.titel) {
+							var h3 = document.createElement("h3");
+							h3.textContent = item.titel;
+							caption.appendChild(h3);
+						}
+
+						if (item.alt) {
+							var p = document.createElement("p");
+							p.textContent = item.alt;
+							caption.appendChild(p);
+						}
+
+						card.appendChild(img);
+						card.appendChild(caption);
+						col.appendChild(card);
+						galleryEl.appendChild(col);
+					});
+				})
+				.catch(function (err) {
+					console.error("Galerie-Fehler:", err);
+					titelEl.textContent = "Fehler beim Laden";
+					einleitungEl.textContent = err.message;
+					galleryEl.innerHTML = '<div class="col-md-12"><p style="color:red;">Galerie konnte nicht geladen werden.</p></div>';
+				});
+		})();
 	</script>
-
-<script>
-async function loadHolz() {
-	try {
-		const titelEl = document.getElementById('titel');
-		const einleitungEl = document.getElementById('einleitung');
-		const galleryEl = document.getElementById('gallery');
-
-		if (!titelEl || !einleitungEl || !galleryEl) {
-			throw new Error('Benötigte HTML-Elemente fehlen: titel, einleitung oder gallery');
-		}
-
-		titelEl.textContent = 'Holz wird geladen …';
-
-		const response = await fetch('/content/holz.json?v=' + Date.now());
-		if (!response.ok) {
-			throw new Error('holz.json konnte nicht geladen werden: ' + response.status);
-		}
-
-		const data = await response.json();
-		console.log('JSON geladen:', data);
-
-		titelEl.textContent = data.titel || 'Holz';
-		einleitungEl.textContent = data.einleitung || '';
-
-		galleryEl.innerHTML = '';
-
-		(data.galerie || []).forEach((item, index) => {
-			const bildPfad = (item.bild || '').replace(/^\.\//, '/');
-
-			const col = document.createElement('div');
-			col.className = 'col-md-6 col-sm-6 gallery-item animate-box';
-
-			col.innerHTML = `
-				<div class="gallery-card">
-					<img src="${bildPfad}" class="img-responsive" alt="${item.alt || item.titel || ''}">
-					<div class="gallery-caption">
-						${item.titel ? `<h3>${item.titel}</h3>` : ''}
-						${item.alt ? `<p>${item.alt}</p>` : ''}
-					</div>
-				</div>
-			`;
-
-			galleryEl.appendChild(col);
-		});
-
-		if (!data.galerie || data.galerie.length === 0) {
-			galleryEl.innerHTML = '<div class="col-md-12"><p>Noch keine Bilder vorhanden.</p></div>';
-		}
-	} catch (err) {
-		console.error('Galerie-Fehler:', err);
-
-		const titelEl = document.getElementById('titel');
-		const einleitungEl = document.getElementById('einleitung');
-		const galleryEl = document.getElementById('gallery');
-
-		if (titelEl) titelEl.textContent = 'Fehler beim Laden';
-		if (einleitungEl) einleitungEl.textContent = err.message;
-		if (galleryEl) {
-			galleryEl.innerHTML = '<div class="col-md-12"><p style="color:red;">Galerie konnte nicht geladen werden. Details siehe Browser-Konsole.</p></div>';
-		}
-	}
-}
-
-document.addEventListener('DOMContentLoaded', loadHolz);
-</script>
 </body>
 </html>
