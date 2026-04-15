@@ -41,7 +41,7 @@ content:
 
       - name: einleitung
         label: Einleitung
-        type: text
+        type: richtext
 
       - name: galerie
         label: Galerie
@@ -80,7 +80,7 @@ content:
 
       - name: einleitung
         label: Einleitung
-        type: text
+        type: richtext
 
       - name: galerie
         label: Galerie
@@ -119,7 +119,7 @@ content:
 
       - name: einleitung
         label: Einleitung
-        type: text
+        type: richtext
 
       - name: galerie
         label: Galerie
@@ -158,7 +158,7 @@ content:
 
       - name: einleitung
         label: Einleitung
-        type: text
+        type: richtext
 
       - name: galerie
         label: Galerie
@@ -197,7 +197,7 @@ content:
 
     - name: einleitung
       label: Einleitung
-      type: text
+      type: richtext
 
     - name: galerie
       label: Galerie
