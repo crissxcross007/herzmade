@@ -348,7 +348,7 @@
         })
         .then(function (data) {
           titelEl.textContent = data.titel || "Schiefer";
-          einleitungEl.textContent = data.einleitung || "";
+          einleitungEl.innerHTML = data.einleitung || "";
           galleryEl.innerHTML = "";
           statusEl.textContent = "";
 
