@@ -24,6 +24,7 @@ media:
     input: images/edelstahl
     output: /images/edelstahl
 
+
 content:
   - name: holz
     label: Holz
@@ -32,37 +33,23 @@ content:
     format: json
     fields:
       - name: titel
-        label: Titel
         type: string
-
       - name: slug
-        label: Slug
         type: string
-
       - name: einleitung
-        label: Einleitung
         type: richtext
-
       - name: galerie
-        label: Galerie
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{titel}"
+        list: true
         fields:
           - name: bild
-            label: Bild
             type: image
             media: holz
-
           - name: titel
-            label: Bildtitel
+            type: string
+          - name: alt
             type: string
 
-          - name: alt
-            label: Alternativtext
-            type: string
 
   - name: glas
     label: Glas
@@ -71,37 +58,23 @@ content:
     format: json
     fields:
       - name: titel
-        label: Titel
         type: string
-
       - name: slug
-        label: Slug
         type: string
-
       - name: einleitung
-        label: Einleitung
         type: richtext
-
       - name: galerie
-        label: Galerie
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{titel}"
+        list: true
         fields:
           - name: bild
-            label: Bild
             type: image
             media: glas
-
           - name: titel
-            label: Bildtitel
+            type: string
+          - name: alt
             type: string
 
-          - name: alt
-            label: Alternativtext
-            type: string
 
   - name: schiefer
     label: Schiefer
@@ -110,37 +83,23 @@ content:
     format: json
     fields:
       - name: titel
-        label: Titel
         type: string
-
       - name: slug
-        label: Slug
         type: string
-
       - name: einleitung
-        label: Einleitung
         type: richtext
-
       - name: galerie
-        label: Galerie
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{titel}"
+        list: true
         fields:
           - name: bild
-            label: Bild
             type: image
             media: schiefer
-
           - name: titel
-            label: Bildtitel
+            type: string
+          - name: alt
             type: string
 
-          - name: alt
-            label: Alternativtext
-            type: string
 
   - name: zipper
     label: Zipper
@@ -149,37 +108,23 @@ content:
     format: json
     fields:
       - name: titel
-        label: Titel
         type: string
-
       - name: slug
-        label: Slug
         type: string
-
       - name: einleitung
-        label: Einleitung
         type: richtext
-
       - name: galerie
-        label: Galerie
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{titel}"
+        list: true
         fields:
           - name: bild
-            label: Bild
             type: image
             media: zipper
-
           - name: titel
-            label: Bildtitel
+            type: string
+          - name: alt
             type: string
 
-          - name: alt
-            label: Alternativtext
-            type: string
 
   - name: edelstahl
     label: Edelstahl
@@ -187,39 +132,25 @@ content:
     path: content/edelstahl.json
     format: json
     fields:
-     - name: titel
-       label: Titel
-       type: string
+      - name: titel
+        type: string
+      - name: slug
+        type: string
+      - name: einleitung
+        type: richtext
+      - name: galerie
+        type: object
+        list: true
+        fields:
+          - name: bild
+            type: image
+            media: edelstahl
+          - name: titel
+            type: string
+          - name: alt
+            type: string
 
-     - name: slug
-       label: Slug
-       type: string
 
-     - name: einleitung
-       label: Einleitung
-       type: richtext
-
-     - name: galerie
-       label: Galerie
-       type: object
-       list:
-         collapsible:
-           collapsed: true
-           summary: "{titel}"
-       fields:
-         - name: bild
-           label: Bild
-           type: image
-           media: edelstahl
-
-         - name: titel
-           label: Bildtitel
-           type: string
-
-         - name: alt
-           label: Alternativtext
-           type: string
-  
-  settings:
+settings:
   content:
     merge: true
