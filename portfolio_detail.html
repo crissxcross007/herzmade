@@ -205,46 +205,70 @@
 			});
 	</script>
 
-	<script>
-		async function loadHolz() {
-			try {
-				const response = await fetch('/content/holz.json');
-				if (!response.ok) {
-					throw new Error('holz.json konnte nicht geladen werden');
-				}
+<script>
+async function loadHolz() {
+	try {
+		const titelEl = document.getElementById('titel');
+		const einleitungEl = document.getElementById('einleitung');
+		const galleryEl = document.getElementById('gallery');
 
-				const data = await response.json();
-
-				document.getElementById('titel').textContent = data.titel || 'Holz';
-				document.getElementById('einleitung').textContent = data.einleitung || '';
-
-				const gallery = document.getElementById('gallery');
-				gallery.innerHTML = '';
-
-				(data.galerie || []).forEach(item => {
-					const col = document.createElement('div');
-					col.className = 'col-md-6 col-sm-6 gallery-item animate-box';
-
-					col.innerHTML = `
-						<div class="gallery-card">
-							<img src="${item.bild}" class="img-responsive" alt="${item.alt || item.titel || ''}">
-							<div class="gallery-caption">
-								${item.titel ? `<h3>${item.titel}</h3>` : ''}
-								${item.alt ? `<p>${item.alt}</p>` : ''}
-							</div>
-						</div>
-					`;
-
-					gallery.appendChild(col);
-				});
-			} catch (err) {
-				console.error(err);
-				document.getElementById('titel').textContent = 'Fehler beim Laden';
-				document.getElementById('einleitung').textContent = 'Die Inhalte konnten gerade nicht geladen werden.';
-			}
+		if (!titelEl || !einleitungEl || !galleryEl) {
+			throw new Error('Benötigte HTML-Elemente fehlen: titel, einleitung oder gallery');
 		}
 
-		loadHolz();
-	</script>
+		titelEl.textContent = 'Holz wird geladen …';
+
+		const response = await fetch('/content/holz.json?v=' + Date.now());
+		if (!response.ok) {
+			throw new Error('holz.json konnte nicht geladen werden: ' + response.status);
+		}
+
+		const data = await response.json();
+		console.log('JSON geladen:', data);
+
+		titelEl.textContent = data.titel || 'Holz';
+		einleitungEl.textContent = data.einleitung || '';
+
+		galleryEl.innerHTML = '';
+
+		(data.galerie || []).forEach((item, index) => {
+			const bildPfad = (item.bild || '').replace(/^\.\//, '/');
+
+			const col = document.createElement('div');
+			col.className = 'col-md-6 col-sm-6 gallery-item animate-box';
+
+			col.innerHTML = `
+				<div class="gallery-card">
+					<img src="${bildPfad}" class="img-responsive" alt="${item.alt || item.titel || ''}">
+					<div class="gallery-caption">
+						${item.titel ? `<h3>${item.titel}</h3>` : ''}
+						${item.alt ? `<p>${item.alt}</p>` : ''}
+					</div>
+				</div>
+			`;
+
+			galleryEl.appendChild(col);
+		});
+
+		if (!data.galerie || data.galerie.length === 0) {
+			galleryEl.innerHTML = '<div class="col-md-12"><p>Noch keine Bilder vorhanden.</p></div>';
+		}
+	} catch (err) {
+		console.error('Galerie-Fehler:', err);
+
+		const titelEl = document.getElementById('titel');
+		const einleitungEl = document.getElementById('einleitung');
+		const galleryEl = document.getElementById('gallery');
+
+		if (titelEl) titelEl.textContent = 'Fehler beim Laden';
+		if (einleitungEl) einleitungEl.textContent = err.message;
+		if (galleryEl) {
+			galleryEl.innerHTML = '<div class="col-md-12"><p style="color:red;">Galerie konnte nicht geladen werden. Details siehe Browser-Konsole.</p></div>';
+		}
+	}
+}
+
+document.addEventListener('DOMContentLoaded', loadHolz);
+</script>
 </body>
 </html>
