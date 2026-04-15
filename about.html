@@ -19,7 +19,6 @@
 
 <link rel="canonical" href="https://herzmade.de/about.html">
 
-<!-- OpenGraph (Facebook / WhatsApp Vorschau) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Über Herzmade – Gravuren aus Döbern">
 <meta property="og:image" content="https://herzmade.de/images/herzmade-social.jpg">
@@ -27,14 +26,12 @@
 <meta property="og:site_name" content="Herzmade">
 <meta property="og:description" content="Die Gravurwerkstatt Herzmade aus 03159 Döbern fertigt personalisierte Lasergravuren auf Holz, Glas und Schiefer – individuell und mit Herz.">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Über Herzmade – Gravuren aus Döbern">
 <meta name="twitter:image" content="https://herzmade.de/images/herzmade-social.jpg">
 <meta name="twitter:url" content="https://herzmade.de/about.html">
 <meta name="twitter:description" content="Herzmade – personalisierte Lasergravuren aus Döbern in der Lausitz.">
 
-<!-- Strukturierte Daten für Google -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -61,13 +58,11 @@
 }
 </script>
 
-<!-- CSS -->
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Modernizr -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 
 <!--[if lt IE 9]>
@@ -95,8 +90,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="author">
-							<div class="author-inner animate-box" style="background-image: url(images/person3.jpeg);">
-							</div>
+							<div class="author-inner animate-box" style="background-image: url(images/person3.jpeg);"></div>
 							<div class="desc animate-box">
 								<span>Mit <i class="icon-heart2"></i> gemacht statt Barcode.</span>
 								<h3>Herzmade</h3>
@@ -215,7 +209,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Individuell. Persönlich. Mit Herz.</h2>
 						<p>Ob Gravuren auf Holz, Glas, Schiefer, Keramik oder kleine Geschenkideen – wir freuen uns auf deine Anfrage.</p>
-						<p><a href="/contact.html" class="btn btn-primary">Kontaktiere uns</a></p>
+						<p><a href="contact.html" class="btn btn-primary">Kontaktiere uns</a></p>
 					</div>
 				</div>
 			</div>
@@ -232,42 +226,40 @@
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/main.js"></script>
 
 	<script>
-	fetch("menu.html")
-	  .then(res => res.text())
-	  .then(data => {
-	    document.getElementById("menu-placeholder").innerHTML = data;
+	Promise.all([
+	  fetch("menu.html").then(res => res.text()),
+	  fetch("footer.html").then(res => res.text())
+	]).then(([menuData, footerData]) => {
+	  document.getElementById("menu-placeholder").innerHTML = menuData;
+	  document.getElementById("footer-placeholder").innerHTML = footerData;
 
-	    var currentPage = window.location.pathname.split("/").pop() || "index.html";
-	    var menuLinks = document.querySelectorAll("#menu-placeholder a[href]");
+	  var currentPage = window.location.pathname.split("/").pop() || "index.html";
+	  var menuLinks = document.querySelectorAll("#menu-placeholder a[href]");
 
-	    menuLinks.forEach(function(link) {
-	      var linkPage = link.getAttribute("href");
+	  menuLinks.forEach(function(link) {
+	    var linkPage = link.getAttribute("href");
 
-	      if (linkPage === currentPage) {
-	        var li = link.closest("li");
-	        if (li) {
-	          li.classList.add("active");
-	        }
+	    if (linkPage === currentPage) {
+	      var li = link.closest("li");
+	      if (li) li.classList.add("active");
 
-	        var dropdown = link.closest(".dropdown");
-	        if (dropdown) {
-	          var parentLi = dropdown.closest(".has-dropdown");
-	          if (parentLi) {
-	            parentLi.classList.add("active");
-	          }
-	        }
+	      var dropdown = link.closest(".dropdown");
+	      if (dropdown) {
+	        var parentLi = dropdown.closest(".has-dropdown");
+	        if (parentLi) parentLi.classList.add("active");
 	      }
-	    });
+	    }
 	  });
 
-	fetch("footer.html")
-	  .then(res => res.text())
-	  .then(data => {
-	    document.getElementById("footer-placeholder").innerHTML = data;
-	  });
+	  var mainScript = document.createElement("script");
+	  mainScript.src = "js/main.js";
+	  document.body.appendChild(mainScript);
+	}).catch(function(error) {
+	  console.error("Fehler beim Laden von Menü oder Footer:", error);
+	});
 	</script>
+
 </body>
 </html>
