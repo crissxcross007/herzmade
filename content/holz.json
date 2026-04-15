@@ -7,6 +7,11 @@
       "bild": "/images/holz/kachel_ringe_full.png",
       "titel": "Ringe",
       "alt": "Gravierte Ringe auf Holz"
+    },
+    {
+      "bild": "/images/holz/zimmerei-logo.jpg",
+      "titel": "Zimmerei Sachse",
+      "alt": "Ein Logo von Sachse"
     }
   ]
 }
