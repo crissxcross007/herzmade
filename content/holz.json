@@ -1,6 +1,12 @@
-{
-  "titel": "Holz",
-  "slug": "Holz",
-  "einleitung": "Holz ist vielseitig und ideal für persönliche Gravuren.",
-  "galerie": []
-}
+"galerie": [
+  {
+    "bild": "/images/holz/kachel_ringe_full.png",
+    "titel": "Holzbox",
+    "alt": "Gravierte Holzbox"
+  },
+  {
+    "bild": "/images/holz/neues-bild.png",
+    "titel": "Neues Werkstück",
+    "alt": "Beschreibung des neuen Werkstücks"
+  }
+]
