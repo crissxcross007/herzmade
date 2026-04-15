@@ -2,5 +2,11 @@
   "titel": "Glas",
   "slug": "glas",
   "einleitung": "Gravuren auf Glas wirken elegant, persönlich und besonders hochwertig.",
-  "galerie": []
+  "galerie": [
+    {
+      "bild": "/images/holz/kachel_ringe_full-1.png",
+      "titel": "Ringe auf Glas",
+      "alt": "Ringe zur Hochzeit auf einer Glasscheibe die dann in eine Laterne eingesetzt wurde."
+    }
+  ]
 }
