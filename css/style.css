@@ -1294,5 +1294,81 @@ blockquote .person cite {
   padding: 0;
   margin: 0 0 5px 0;
 }
+/* Herzmade Logo im Header */
+.fh5co-nav .fh5co-top-logo {
+  width: 24%;
+}
 
+.fh5co-nav .fh5co-top-menu {
+  width: 56%;
+}
+
+.fh5co-nav .fh5co-top-social {
+  width: 20%;
+}
+
+.fh5co-nav #fh5co-logo {
+  font-size: 0;
+  line-height: 1;
+}
+
+.fh5co-nav #fh5co-logo .logo-link {
+  display: inline-block;
+  padding: 0;
+  line-height: 1;
+}
+
+.fh5co-nav #fh5co-logo .site-logo {
+  display: block;
+  max-height: 78px;
+  width: auto;
+  max-width: 100%;
+}
+
+.fh5co-nav .fh5co-top-logo {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .fh5co-nav .fh5co-top-logo {
+    width: 30%;
+  }
+
+  .fh5co-nav .fh5co-top-menu {
+    width: 50%;
+  }
+
+  .fh5co-nav .fh5co-top-social {
+    width: 20%;
+  }
+
+  .fh5co-nav #fh5co-logo .site-logo {
+    max-height: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav {
+    padding: 12px 0;
+  }
+
+  .fh5co-nav .fh5co-top-logo {
+    width: 70%;
+  }
+
+  .fh5co-nav .fh5co-top-social {
+    width: auto;
+    float: right;
+    margin-right: 50px;
+  }
+
+  .fh5co-nav #fh5co-logo .site-logo {
+    max-height: 52px;
+  }
+
+  #page {
+    padding-top: 5.5em !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */
