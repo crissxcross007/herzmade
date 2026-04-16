@@ -195,26 +195,7 @@
   <div class="fh5co-loader"></div>
 
   <div id="page">
-    <nav class="fh5co-nav" role="navigation">
-      <div class="container">
-        <div class="fh5co-top-logo">
-          <div id="fh5co-logo"><a href="index.html">Herzmade</a></div>
-        </div>
-        <div class="fh5co-top-menu menu-1 text-center">
-          <ul>
-            <li><a href="work.html">Portfolio</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="fh5co-top-social menu-1 text-right">
-          <ul class="fh5co-social">
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="menu-placeholder"></div>
 
     <div id="fh5co-author">
       <div class="container">
@@ -230,10 +211,10 @@
 
             <div class="row row-pt-md portfolio-navigation">
               <div class="col-xs-4 text-left">
-                <a href="work.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Zurück</a>
+                <a href="index.html" class="btn btn-primary btn-outline"><i class="icon-chevron-left"></i> Zurück</a>
               </div>
               <div class="col-xs-4 text-center">
-                <a href="work.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> Portfolio</a>
+                <a href="index.html" class="btn btn-primary btn-outline"><i class="icon-grid2"></i> Portfolio</a>
               </div>
               <div class="col-xs-4 text-right">
                 <a href="contact.html" class="btn btn-primary btn-outline">Anfragen <i class="icon-chevron-right"></i></a>
@@ -250,7 +231,7 @@
           <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2>Individuell. Persönlich. Mit Herz.</h2>
             <p>Ob Gravuren auf Holz, Glas, Schiefer oder kleine Geschenkideen – wir freuen uns auf deine Anfrage.</p>
-            <p><a href="/contact.html" class="btn btn-primary">Kontaktiere uns</a></p>
+            <p><a href="contact.html" class="btn btn-primary">Kontaktiere uns</a></p>
           </div>
         </div>
       </div>
@@ -275,11 +256,9 @@
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/main.js"></script>
 
   <script>
     (function () {
-      var footerPlaceholder = document.getElementById("footer-placeholder");
       var titelEl = document.getElementById("titel");
       var einleitungEl = document.getElementById("einleitung");
       var statusEl = document.getElementById("status");
@@ -288,17 +267,6 @@
       var lightboxImageEl = document.getElementById("lightbox-image");
       var lightboxCaptionEl = document.getElementById("lightbox-caption");
       var lightboxCloseEl = document.getElementById("lightbox-close");
-
-      if (footerPlaceholder) {
-        fetch("/footer.html")
-          .then(function (res) { return res.text(); })
-          .then(function (data) {
-            footerPlaceholder.innerHTML = data;
-          })
-          .catch(function (err) {
-            console.error("Footer-Fehler:", err);
-          });
-      }
 
       function openLightbox(src, altText, titleText) {
         lightboxImageEl.src = src;
@@ -332,36 +300,54 @@
         }
       });
 
-      if (!titelEl || !einleitungEl || !statusEl || !galleryEl) {
-        console.error("Fehlende Elemente für die Galerie.");
-        return;
-      }
-
-      statusEl.textContent = "Galerie wird geladen …";
-
-      fetch("/content/glas.json?v=" + Date.now())
-        .then(function (res) {
+      Promise.all([
+        fetch("menu.html").then(function (res) { return res.text(); }),
+        fetch("footer.html").then(function (res) { return res.text(); }),
+        fetch("content/glas.json?v=" + Date.now()).then(function (res) {
           if (!res.ok) {
             throw new Error("glas.json konnte nicht geladen werden: " + res.status);
           }
           return res.json();
         })
-        .then(function (data) {
-          titelEl.textContent = data.titel || "Glas";
-          einleitungEl.innerHTML = data.einleitung || "";
-          galleryEl.innerHTML = "";
-          statusEl.textContent = "";
+      ]).then(function (results) {
+        var menuData = results[0];
+        var footerData = results[1];
+        var data = results[2];
 
-          if (!data.galerie || !data.galerie.length) {
-            galleryEl.innerHTML = '<p class="gallery-empty">Noch keine Bilder vorhanden.</p>';
-            return;
+        document.getElementById("menu-placeholder").innerHTML = menuData;
+        document.getElementById("footer-placeholder").innerHTML = footerData;
+
+        var currentPage = window.location.pathname.split("/").pop() || "index.html";
+        var menuLinks = document.querySelectorAll("#menu-placeholder a[href]");
+
+        menuLinks.forEach(function (link) {
+          var linkPage = link.getAttribute("href");
+
+          if (linkPage === currentPage) {
+            var li = link.closest("li");
+            if (li) li.classList.add("active");
+
+            var dropdown = link.closest(".dropdown");
+            if (dropdown) {
+              var parentLi = dropdown.closest(".has-dropdown");
+              if (parentLi) parentLi.classList.add("active");
+            }
           }
+        });
 
+        titelEl.textContent = data.titel || "Glas";
+        einleitungEl.innerHTML = data.einleitung || "";
+        galleryEl.innerHTML = "";
+        statusEl.textContent = "";
+
+        if (!data.galerie || !data.galerie.length) {
+          galleryEl.innerHTML = '<p class="gallery-empty">Noch keine Bilder vorhanden.</p>';
+        } else {
           data.galerie.forEach(function (item) {
             var bildPfad = item.bild || "";
 
             if (bildPfad.indexOf("./") === 0) {
-              bildPfad = "/" + bildPfad.substring(2);
+              bildPfad = bildPfad.substring(2);
             }
 
             var card = document.createElement("div");
@@ -395,14 +381,19 @@
 
             galleryEl.appendChild(card);
           });
-        })
-        .catch(function (err) {
-          console.error("Galerie-Fehler:", err);
-          titelEl.textContent = "Fehler beim Laden";
-          einleitungEl.textContent = "Die Inhalte konnten gerade nicht geladen werden.";
-          statusEl.textContent = err.message;
-          galleryEl.innerHTML = '<p class="gallery-error">Galerie konnte nicht geladen werden.</p>';
-        });
+        }
+
+        var mainScript = document.createElement("script");
+        mainScript.src = "js/main.js";
+        document.body.appendChild(mainScript);
+      }).catch(function (err) {
+        console.error("Fehler:", err);
+
+        if (titelEl) titelEl.textContent = "Fehler beim Laden";
+        if (einleitungEl) einleitungEl.textContent = "Die Inhalte konnten gerade nicht geladen werden.";
+        if (statusEl) statusEl.textContent = err.message;
+        if (galleryEl) galleryEl.innerHTML = '<p class="gallery-error">Galerie konnte nicht geladen werden.</p>';
+      });
     })();
   </script>
 </body>
