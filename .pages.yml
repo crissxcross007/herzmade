@@ -1,53 +1,10 @@
 media:
-  - name: holz
-    label: Holzbilder
-    input: images/holz
-    output: /images/holz
+  - name: bilder
+    label: Bilder
+    input: images
+    output: /images
     rename: safe
     extensions: [jpg, jpeg, png, webp]
-
-  - name: glas
-    label: Glasbilder
-    input: images/glas
-    output: /images/glas
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
-  - name: schiefer
-    label: Schieferbilder
-    input: images/schiefer
-    output: /images/schiefer
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
-  - name: zipper
-    label: Zipperbilder
-    input: images/zipper
-    output: /images/zipper
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
-  - name: edelstahl
-    label: Edelstahlbilder
-    input: images/edelstahl
-    output: /images/edelstahl
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
-  - name: leder
-    label: Lederbilder
-    input: images/leder
-    output: /images/leder
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
-  - name: keramik
-    label: Keramikbilder
-    input: images/keramik
-    output: /images/keramik
-    rename: safe
-    extensions: [jpg, jpeg, png, webp]
-
 
 content:
   - name: holz
@@ -70,12 +27,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: holz
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: glas
     label: Glas
@@ -97,12 +53,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: glas
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: schiefer
     label: Schiefer
@@ -124,12 +79,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: schiefer
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: zipper
     label: Zipper
@@ -151,12 +105,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: zipper
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: edelstahl
     label: Edelstahl
@@ -178,12 +131,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: edelstahl
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: leder
     label: Leder
@@ -205,12 +157,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: leder
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
   - name: keramik
     label: Keramik
@@ -232,12 +183,11 @@ content:
           - name: bild
             label: Bild
             type: image
-            media: keramik
+            media: bilder
           - name: titel
             type: string
           - name: alt
             type: string
-
 
 settings:
   content:
