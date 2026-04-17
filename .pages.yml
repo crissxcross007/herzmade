@@ -43,7 +43,7 @@ media:
 
   - name: keramik
     label: Keramikbilder
-    input: /images/keramik
+    input: images/
     output: /images/keramik
     rename: safe
     extensions: [jpg, jpeg, png, webp]
