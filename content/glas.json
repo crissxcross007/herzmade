@@ -71,7 +71,12 @@
     {
       "bild": "/images/glas/img2036.jpeg",
       "titel": "Weihnachtsbaumkugel Halbendorf",
-      "alt": "Silberne Weihnachtsbaumkugel mit dem Logo von Halbendorf graviert"
+      "alt": "Silberne Weihnachtsbaumkugel mit dem Logo von Halbendorf graviert."
+    },
+    {
+      "bild": "/images/img1848.jpeg",
+      "titel": "Glas",
+      "alt": "Glas"
     }
   ]
 }
