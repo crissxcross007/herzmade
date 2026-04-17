@@ -3,26 +3,50 @@ media:
     label: Holzbilder
     input: images/holz
     output: /images/holz
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
   - name: glas
     label: Glasbilder
     input: images/glas
     output: /images/glas
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
   - name: schiefer
     label: Schieferbilder
     input: images/schiefer
     output: /images/schiefer
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
   - name: zipper
     label: Zipperbilder
     input: images/zipper
     output: /images/zipper
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
   - name: edelstahl
     label: Edelstahlbilder
     input: images/edelstahl
     output: /images/edelstahl
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+  - name: leder
+    label: Lederbilder
+    input: images/leder
+    output: /images/leder
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+  - name: keramik
+    label: Keramikbilder
+    input: images/keramik
+    output: /images/keramik
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
 
 content:
@@ -39,10 +63,12 @@ content:
       - name: einleitung
         type: richtext
       - name: galerie
+        label: Galerie
         type: object
         list: true
         fields:
           - name: bild
+            label: Bild
             type: image
             media: holz
           - name: titel
@@ -64,10 +90,12 @@ content:
       - name: einleitung
         type: richtext
       - name: galerie
+        label: Galerie
         type: object
         list: true
         fields:
           - name: bild
+            label: Bild
             type: image
             media: glas
           - name: titel
@@ -89,10 +117,12 @@ content:
       - name: einleitung
         type: richtext
       - name: galerie
+        label: Galerie
         type: object
         list: true
         fields:
           - name: bild
+            label: Bild
             type: image
             media: schiefer
           - name: titel
@@ -114,10 +144,12 @@ content:
       - name: einleitung
         type: richtext
       - name: galerie
+        label: Galerie
         type: object
         list: true
         fields:
           - name: bild
+            label: Bild
             type: image
             media: zipper
           - name: titel
@@ -139,12 +171,68 @@ content:
       - name: einleitung
         type: richtext
       - name: galerie
+        label: Galerie
         type: object
         list: true
         fields:
           - name: bild
+            label: Bild
             type: image
             media: edelstahl
+          - name: titel
+            type: string
+          - name: alt
+            type: string
+
+
+  - name: leder
+    label: Leder
+    type: file
+    path: content/leder.json
+    format: json
+    fields:
+      - name: titel
+        type: string
+      - name: slug
+        type: string
+      - name: einleitung
+        type: richtext
+      - name: galerie
+        label: Galerie
+        type: object
+        list: true
+        fields:
+          - name: bild
+            label: Bild
+            type: image
+            media: leder
+          - name: titel
+            type: string
+          - name: alt
+            type: string
+
+
+  - name: keramik
+    label: Keramik
+    type: file
+    path: content/keramik.json
+    format: json
+    fields:
+      - name: titel
+        type: string
+      - name: slug
+        type: string
+      - name: einleitung
+        type: richtext
+      - name: galerie
+        label: Galerie
+        type: object
+        list: true
+        fields:
+          - name: bild
+            label: Bild
+            type: image
+            media: keramik
           - name: titel
             type: string
           - name: alt
