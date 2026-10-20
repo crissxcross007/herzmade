@@ -1,0 +1,18 @@
+{
+  "material": "glas",
+  "produktart": "windlicht",
+  "bild": "/images/glas/glas-hund-erinnerung.jpg",
+  "titel": "Ein Andenken an den Lieblingshund",
+  "alt": "Schwarzes Glas mit persönlicher Hundemotiv-Gravur als Erinnerung an einen verstorbenen Hund.",
+  "anlaesse": [
+    "gedenken"
+  ],
+  "in_ideen": true,
+  "preis_ab": "19,90",
+  "preishinweis": "Weißes oder schwarzes Glas inklusive persönlicher Gravur.",
+  "sortierung": 1,
+  "ideen_reihenfolge": 150,
+  "zuordnung_offen": false,
+  "anlass_notiz": "Vom Inhaber bestätigt: Erinnerungsstück an einen verstorbenen Hund.",
+  "_id": "glas-glas-hund-erinnerung"
+}

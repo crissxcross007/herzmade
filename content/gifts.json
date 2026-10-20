@@ -1,0 +1,197 @@
+[
+  {
+    "title": "Schiefertafeln",
+    "price": "7,00",
+    "material": "schiefer",
+    "image": "images/schiefer/schiefertafel-paare.jpg",
+    "alt": "Schiefertafel mit Namen und einem Paar vor einer Berglandschaft.",
+    "occasions": [
+      "paare",
+      "ehrung",
+      "andenken"
+    ],
+    "description": "Fotos für Paare, persönliche Andenken oder eine besondere Auszeichnung.",
+    "detail": "10 × 10 cm ab 7,00 € · 25 × 25 cm ab 24,90 € · 20 × 30 cm ab 29,90 €. Größere Tafeln auf Anfrage."
+  },
+  {
+    "title": "Klare Weingläser",
+    "price": "14,90",
+    "material": "glas",
+    "image": "images/glas/weinglas-hochzeit.jpg",
+    "alt": "Klares Weinglas mit gravierten Ringen, Namen und Hochzeitsdatum.",
+    "occasions": [
+      "geburtstag",
+      "freundschaft",
+      "paare"
+    ],
+    "description": "Ein Name, ein Spruch, eine kleine Aufmerksamkeit – zum Geburtstag oder für gute Freunde.",
+    "detail": "Klares Weinglas inklusive persönlicher Gravur."
+  },
+  {
+    "title": "Schwarze Weingläser",
+    "price": "19,90",
+    "material": "glas",
+    "image": "images/glas/img5452.jpeg",
+    "alt": "Eine Humorvolle Gravur zum 40ten Hochzeitstag auf schwarzen Stölzle Gläsern der Serie „Blind Tasty“",
+    "occasions": [
+      "geburtstag",
+      "freundschaft",
+      "paare"
+    ],
+    "description": "Für Freundschaften, Geburtstage oder einen gemeinsamen besonderen Moment.",
+    "detail": "Black Tasty: schwarzes Weinglas inklusive Gravur."
+  },
+  {
+    "title": "Windlichter mit Botschaft",
+    "price": "19,90",
+    "material": "glas",
+    "image": "images/glas/img5674.jpeg",
+    "alt": "Anlässlich eines 15 jährigem Firmenjubiläum durften wir ein Windlicht in elegantem weiß , innen Gold 🥇 gravieren",
+    "occasions": [
+      "paare",
+      "ehrung",
+      "andenken"
+    ],
+    "description": "Zur goldenen Hochzeit, zum Jubiläum oder als persönliches Trauer- und Gedenklicht.",
+    "detail": "Weißes oder schwarzes Glas inklusive Gravur. Auch als Pokal gestaltbar."
+  },
+  {
+    "title": "Flaschenöffner",
+    "price": "4,90",
+    "material": "holz",
+    "image": "images/holz/holzscheibe-wappen.jpg",
+    "alt": "Individuell gravierter Holzflaschenöffner als Geburtstagsgeschenk für eine Feuerwehrfrau, mit Feuerwehrlogo, Stadtwappen und ihrem Namen.",
+    "occasions": [
+      "geburtstag"
+    ],
+    "description": "Persönliche Flaschenöffner mit Namen, Motiv oder Logo.",
+    "detail": "Inklusive Material und Gravur."
+  },
+  {
+    "title": "Holzosterei",
+    "price": "6,90",
+    "material": "holz",
+    "image": "images/holz/holz-ostereier-sprueche.jpg",
+    "alt": "Gravierte Ostereier mit unterschiedlichen Sprüchen und Motiven als persönliche Osteraufmerksamkeit.",
+    "occasions": [
+      "ostern"
+    ],
+    "description": "Holzostereier mit persönlicher Gravur, Motiven oder Sprüchen.",
+    "detail": "Inklusive Material und Gravur. Eine passende Verpackung kommt separat hinzu."
+  },
+  {
+    "title": "Brettchen & Holzgeschenke",
+    "price": "7,90",
+    "material": "holz",
+    "image": "images/holz/brett-lieblingsfussballer.jpg",
+    "alt": "Holzbox zum Geburtstag mit graviertem Fußballlogo und dem Schriftzug „Noel’s Süßigkeitenbox“ auf dem Deckel.",
+    "occasions": [
+      "geburtstag",
+      "freundschaft",
+      "paare",
+      "ehrung",
+      "andenken"
+    ],
+    "description": "Für die Küche, als Gastgeschenk, Veranstaltungspokal oder persönliches Andenken.",
+    "detail": "Brettchen je nach Größe ab 7,90 €. Baumscheiben und weitere Holzarbeiten auf Anfrage."
+  },
+  {
+    "title": "Weihnachtskugeln aus Echtglas",
+    "price": "9,90",
+    "material": "glas",
+    "image": "images/glas/2025-11-2216-50-59948.jpg",
+    "alt": "Blaue Weihnachtsbaumkugel aus Glas mit graviertem Klein-Loitz-Motiv vor einem Weihnachtsbaum.",
+    "occasions": [
+      "weihnachten",
+      "paare",
+      "andenken"
+    ],
+    "description": "Ein Name, ein Lieblingsmotiv oder ein Foto für den ganz persönlichen Weihnachtsbaum.",
+    "detail": "8 cm Durchmesser · inklusive Foto- oder Grafikbearbeitung ab 14,90 €.",
+    "gallery": "weihnachtsbaumkugeln.html#gallery"
+  },
+  {
+    "title": "Edelstahltassen",
+    "price": "9,90",
+    "material": "edelstahl",
+    "image": "images/edelstahl/tasse-geschenkbox.jpg",
+    "alt": "Edelstahltasse für einen Feuerwehrmann mit dem Filmspruch aus „Pearl Harbor“: „Nichts schlägt so stark wie das Herz eines Freiwilligen“. Dazu eine Geschenkbox aus lasergeschnittenem Holz.",
+    "occasions": [
+      "geburtstag",
+      "freundschaft"
+    ],
+    "description": "Mit Namen oder Wunschmotiv als persönliches Geschenk für Lieblingsmenschen.",
+    "detail": "Edelstahltasse inklusive Gravur."
+  },
+  {
+    "title": "Thermoflaschen & Thermobecher",
+    "price": "14,90",
+    "material": "edelstahl",
+    "image": "images/edelstahl/thermobecher-persoenlich.jpg",
+    "alt": "Passendes Set aus rosa Thermoflasche und Tasse mit persönlicher Gravur – als Abschiedsgeschenk einer Rettungsdienst-Schülergruppe für ihren Dozenten.",
+    "occasions": [
+      "geburtstag",
+      "freundschaft",
+      "ehrung"
+    ],
+    "description": "Persönliche Begleiter für Kinder, Teenager und Erwachsene – zum Geburtstag oder als Freundschaftsgeschenk.",
+    "detail": "Thermoflasche oder Thermobecher inklusive Gravur, je nach Ausführung."
+  },
+  {
+    "title": "Laternen mit Gravur",
+    "price": "14,90",
+    "material": "glas",
+    "image": "images/glas/laterne-lebensbaum.jpg",
+    "alt": "Schwarze Laterne mit graviertem Lebensbaum und persönlicher Botschaft für einen Lehrer.",
+    "occasions": [
+      "paare",
+      "ehrung",
+      "andenken",
+      "geburtstag"
+    ],
+    "description": "Ein Licht für besondere Momente – zur Hochzeit, zum Jubiläum oder als persönliche Erinnerung.",
+    "detail": "20 cm hoch, inklusive Material und Gravur. Größe und Ausführung stimmen wir mit dir ab."
+  },
+  {
+    "title": "Persönliche Geschenkverpackungen",
+    "price": "3,00",
+    "material": "papier",
+    "image": "images/papier/papier-box-umschlag-schmetterling.jpg",
+    "alt": "Papierbox mit filigranem Ausschnitt und ein Umschlag mit Schmetterlingen.",
+    "occasions": [
+      "geburtstag",
+      "freundschaft",
+      "paare",
+      "ehrung",
+      "weihnachten",
+      "andenken"
+    ],
+    "description": "Das i-Tüpfelchen für dein Geschenk: individuelle Papierboxen, Umschläge und liebevolle Verpackungen.",
+    "detail": "Verpackungen ab 3,00 € je nach Größe und Gestaltung. Inhalt und Werkstück separat."
+  },
+  {
+    "title": "Glasmedaillen",
+    "price": "9,90",
+    "material": "glas",
+    "image": "images/glas/glasmedaille-tanzgruppe-halbendorf.jpg",
+    "alt": "Gravierte Glasmedaille mit Tänzerin im Herz, „Halbendorf“ und „10.2026“ am grünen Band – als Dankeschön für eine Gruppe Mädchen, die beim Rentnercafé in Halbendorf aufgetreten ist.",
+    "occasions": [
+      "danke",
+      "ehrung"
+    ],
+    "description": "Individuelle Glasmedaillen als Dankeschön oder Auszeichnung.",
+    "detail": "Inklusive Gravur, Band und Grafikerstellung."
+  },
+  {
+    "title": "Holz-Cut-Arbeiten",
+    "price": "4,90",
+    "material": "holz",
+    "image": "images/holz/holz-geschenkkartenhalter-danke.jpg",
+    "alt": "Lasergeschnittene Geschenkkartenhalterung aus Holz mit dem Schriftzug „Danke“ und persönlicher Gravur.",
+    "occasions": [
+      "danke"
+    ],
+    "description": "Filigrane Ausschnitte aus Holz nach persönlichem Wunsch.",
+    "detail": "Arbeitsleistung ab 4,90 € zuzüglich Material."
+  }
+]
