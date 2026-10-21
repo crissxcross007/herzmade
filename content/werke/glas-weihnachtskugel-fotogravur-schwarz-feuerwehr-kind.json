@@ -1,0 +1,18 @@
+{
+  "material": "glas",
+  "produktart": "weihnachtskugel",
+  "bild": "/images/glas/weihnachtskugel-fotogravur-schwarz-feuerwehr-kind.jpeg",
+  "titel": "Gemeinsame Momente für den Weihnachtsbaum",
+  "alt": "Schwarze glänzende Weihnachtsbaumkugel mit Fotogravur eines Feuerwehrmanns und eines Kindes sowie Sternen und strahlenförmigen Ornamenten.",
+  "anlaesse": [
+    "weihnachten"
+  ],
+  "in_ideen": false,
+  "preis_ab": "14,90",
+  "preishinweis": "Echtglaskugel mit 8 cm Durchmesser, inklusive Fotobearbeitung und Gravur.",
+  "sortierung": -1,
+  "ideen_reihenfolge": 100,
+  "zuordnung_offen": false,
+  "anlass_notiz": "Fotogravur auf Weihnachtsbaumkugel.",
+  "_id": "glas-weihnachtskugel-fotogravur-schwarz-feuerwehr-kind"
+}

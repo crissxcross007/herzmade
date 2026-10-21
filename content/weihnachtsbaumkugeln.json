@@ -3,6 +3,30 @@
   "einleitung": "<p>Ein Lieblingsfoto, ein Name oder ein Motiv mit besonderer Bedeutung: Wir gestalten deine Weihnachtsbaumkugel persönlich nach deinen Wünschen. Unsere Kugeln aus Echtglas haben einen Durchmesser von 8 cm.</p><p>Ob als Erinnerung an die Hochzeit, an das erste Weihnachten oder an einen geliebten Menschen oder ein Tier – entdecke hier echte Arbeiten von Herzmade. Auch Orts- und Vereinsmotive sind möglich. Farbe und Ausführung besprechen wir mit dir.</p>",
   "galerie": [
     {
+      "bild": "/images/glas/weihnachtskugel-fotogravur-gold-feuerwehr-kind.jpeg",
+      "titel": "Ein Familienmoment in Gold",
+      "alt": "Goldfarbene matte Weihnachtsbaumkugel mit Fotogravur eines Feuerwehrmanns und eines Kindes, umrahmt von Sternen und Ornamenten.",
+      "in_ideen": false
+    },
+    {
+      "bild": "/images/glas/weihnachtskugel-fotogravur-gold-einschulung.jpeg",
+      "titel": "Die Einschulung am Weihnachtsbaum",
+      "alt": "Goldfarbene matte Weihnachtsbaumkugel mit Fotogravur eines Erwachsenen und eines Jungen mit Fußball-Schultüte sowie feinen Sternornamenten.",
+      "in_ideen": false
+    },
+    {
+      "bild": "/images/glas/weihnachtskugel-fotogravur-schwarz-einschulung.jpeg",
+      "titel": "Ein besonderer Schultag auf schwarzem Glas",
+      "alt": "Schwarze glänzende Weihnachtsbaumkugel mit heller Fotogravur eines Erwachsenen und eines Jungen mit Schultüte, umrahmt von kleinen Sternen.",
+      "in_ideen": false
+    },
+    {
+      "bild": "/images/glas/weihnachtskugel-fotogravur-schwarz-feuerwehr-kind.jpeg",
+      "titel": "Gemeinsame Momente für den Weihnachtsbaum",
+      "alt": "Schwarze glänzende Weihnachtsbaumkugel mit Fotogravur eines Feuerwehrmanns und eines Kindes sowie Sternen und strahlenförmigen Ornamenten.",
+      "in_ideen": false
+    },
+    {
       "bild": "/images/glas/weihnachtskugel-traktor-kullick.jpg",
       "titel": "Weihnachtskugel mit Traktor",
       "alt": "Rote Weihnachtsbaumkugel mit detailreicher Traktorgravur und dem Schriftzug „Kullick Agrardienste“.",
