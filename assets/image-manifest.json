@@ -455,6 +455,38 @@
     "width": 3024,
     "height": 4032
   },
+  "images/glas/weihnachtskugel-fotogravur-gold-feuerwehr-kind.jpeg": {
+    "600": "assets/img/086e9a094549-600.webp",
+    "w600": 450,
+    "1200": "assets/img/086e9a094549-1200.webp",
+    "w1200": 900,
+    "width": 1152,
+    "height": 1536
+  },
+  "images/glas/weihnachtskugel-fotogravur-gold-einschulung.jpeg": {
+    "600": "assets/img/9d23ec8b64c5-600.webp",
+    "w600": 450,
+    "1200": "assets/img/9d23ec8b64c5-1200.webp",
+    "w1200": 900,
+    "width": 1152,
+    "height": 1536
+  },
+  "images/glas/weihnachtskugel-fotogravur-schwarz-einschulung.jpeg": {
+    "600": "assets/img/db86b424509a-600.webp",
+    "w600": 450,
+    "1200": "assets/img/db86b424509a-1200.webp",
+    "w1200": 900,
+    "width": 1152,
+    "height": 1536
+  },
+  "images/glas/weihnachtskugel-fotogravur-schwarz-feuerwehr-kind.jpeg": {
+    "600": "assets/img/8183b59c1c8a-600.webp",
+    "w600": 450,
+    "1200": "assets/img/8183b59c1c8a-1200.webp",
+    "w1200": 900,
+    "width": 1152,
+    "height": 1536
+  },
   "images/glas/windlicht-meer.jpg": {
     "600": "assets/img/42bf0f17338f-600.webp",
     "w600": 600,
