@@ -2,8 +2,8 @@
   "material": "glas",
   "produktart": "weihnachtskugel",
   "bild": "/images/glas/weihnachtskugel-fotogravur-gold-einschulung.jpeg",
-  "titel": "Die Einschulung am Weihnachtsbaum",
-  "alt": "Goldfarbene matte Weihnachtsbaumkugel mit Fotogravur eines Erwachsenen und eines Jungen mit Fußball-Schultüte sowie feinen Sternornamenten.",
+  "titel": "Der Start ins Gymnasium – als Fotogravur",
+  "alt": "Chris mit seinem Sohn beim Übergang aufs Gymnasium: Das Erinnerungsfoto ist auf einer goldfarbenen matten Weihnachtsbaumkugel graviert und mit feinen Sternornamenten umrahmt.",
   "anlaesse": [
     "weihnachten"
   ],
@@ -13,6 +13,6 @@
   "sortierung": -3,
   "ideen_reihenfolge": 100,
   "zuordnung_offen": false,
-  "anlass_notiz": "Fotogravur auf Weihnachtsbaumkugel.",
+  "anlass_notiz": "Chris mit seinem Sohn beim Übergang aufs Gymnasium.",
   "_id": "glas-weihnachtskugel-fotogravur-gold-einschulung"
 }

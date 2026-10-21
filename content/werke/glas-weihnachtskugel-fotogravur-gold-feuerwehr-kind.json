@@ -2,17 +2,18 @@
   "material": "glas",
   "produktart": "weihnachtskugel",
   "bild": "/images/glas/weihnachtskugel-fotogravur-gold-feuerwehr-kind.jpeg",
-  "titel": "Ein Familienmoment in Gold",
-  "alt": "Goldfarbene matte Weihnachtsbaumkugel mit Fotogravur eines Feuerwehrmanns und eines Kindes, umrahmt von Sternen und Ornamenten.",
+  "titel": "Papa und Tochter – als Fotogravur in Gold",
+  "alt": "Chris mit seiner Tochter: Ein gemeinsamer Moment, als Fotogravur auf einer goldfarbenen matten Weihnachtsbaumkugel festgehalten. Sterne und feine Ornamente rahmen das persönliche Motiv ein.",
   "anlaesse": [
-    "weihnachten"
+    "weihnachten",
+    "freundschaft"
   ],
-  "in_ideen": false,
+  "in_ideen": true,
   "preis_ab": "14,90",
   "preishinweis": "Echtglaskugel mit 8 cm Durchmesser, inklusive Fotobearbeitung und Gravur.",
   "sortierung": -4,
-  "ideen_reihenfolge": 100,
+  "ideen_reihenfolge": -10,
   "zuordnung_offen": false,
-  "anlass_notiz": "Fotogravur auf Weihnachtsbaumkugel.",
+  "anlass_notiz": "Chris mit seiner Tochter.",
   "_id": "glas-weihnachtskugel-fotogravur-gold-feuerwehr-kind"
 }

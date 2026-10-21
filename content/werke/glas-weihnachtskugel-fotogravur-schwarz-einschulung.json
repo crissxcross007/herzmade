@@ -2,8 +2,8 @@
   "material": "glas",
   "produktart": "weihnachtskugel",
   "bild": "/images/glas/weihnachtskugel-fotogravur-schwarz-einschulung.jpeg",
-  "titel": "Ein besonderer Schultag auf schwarzem Glas",
-  "alt": "Schwarze glänzende Weihnachtsbaumkugel mit heller Fotogravur eines Erwachsenen und eines Jungen mit Schultüte, umrahmt von kleinen Sternen.",
+  "titel": "Der Gymnasialstart als Fotogravur auf Schwarz",
+  "alt": "Dasselbe Erinnerungsfoto von Chris und seinem Sohn zum Übergang aufs Gymnasium, hier als helle Schwarz-Weiß-Fotogravur auf einer schwarzen glänzenden Weihnachtsbaumkugel. So wirkt das persönliche Motiv auf dunklem Glas.",
   "anlaesse": [
     "weihnachten"
   ],
@@ -13,6 +13,6 @@
   "sortierung": -2,
   "ideen_reihenfolge": 100,
   "zuordnung_offen": false,
-  "anlass_notiz": "Fotogravur auf Weihnachtsbaumkugel.",
+  "anlass_notiz": "Chris mit seinem Sohn beim Übergang aufs Gymnasium.",
   "_id": "glas-weihnachtskugel-fotogravur-schwarz-einschulung"
 }
