@@ -567,6 +567,14 @@
     "width": 3024,
     "height": 4032
   },
+  "images/schiefer/dankeschoen-feuerwehr-jerischke-cottbus.jpeg": {
+    "600": "assets/img/db7d1c23a9cb-600.webp",
+    "w600": 600,
+    "1200": "assets/img/db7d1c23a9cb-1200.webp",
+    "w1200": 1200,
+    "width": 1600,
+    "height": 1200
+  },
   "images/schiefer/schiefer-hundefoto.jpg": {
     "600": "assets/img/ee6bca9ac409-600.webp",
     "w600": 450,
