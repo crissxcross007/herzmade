@@ -1,0 +1,18 @@
+{
+  "material": "schiefer",
+  "produktart": "schiefertafel",
+  "bild": "/images/schiefer/dankeschoen-feuerwehr-jerischke-cottbus.jpeg",
+  "titel": "Ein Dankeschön der Ortswehr Jerischke",
+  "alt": "Eine auf Schiefer gravierte Fotocollage mit Bildern vom Besuch der Leitstelle Lausitz in Cottbus. Die Ortswehr Jerischke bedankt sich damit für die Führung.",
+  "anlaesse": [
+    "danke"
+  ],
+  "in_ideen": false,
+  "preis_ab": "",
+  "preishinweis": "",
+  "sortierung": -1,
+  "ideen_reihenfolge": 150,
+  "zuordnung_offen": false,
+  "anlass_notiz": "",
+  "_id": "schiefer-dankeschoen-feuerwehr-jerischke-cottbus"
+}
