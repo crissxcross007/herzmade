@@ -40,7 +40,7 @@ SCREENSHOT_CROPS = {'images/glas/weihnachtskugel-pferdemotiv.jpeg': (0, 296, 707
 def occasion_url(key):
     if key in ('gedenken', 'andenken'):
         return 'geschenkideen.html#gedenken'
-    return 'weihnachtsbaumkugeln.html' if key == 'weihnachten' else f'geschenkideen.html#{key}'
+    return f'geschenkideen.html#{key}'
 
 def optimize(path):
     path = path.removeprefix('/').removeprefix('./')
