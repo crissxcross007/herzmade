@@ -183,7 +183,8 @@ def build_materials():
             item_title = clean(item.get('titel') or f'Gravur auf {label}')
             item_alt = clean(item.get('alt') or item_title)
             optimized=optimize(item['bild'])
-            gallery+=f'<article class="gallery-item" id="werk-{E(item['_id'])}"><a class="gallery-photo" href="{optimized["1200"]}" data-lightbox data-caption="{E(item_title)}" aria-label="{E(item_title)} vergrößern">{gallery_picture(item)}<span class="photo-arrow" aria-hidden="true">+</span></a><h3>{E(item_title)}</h3><p>{E(item_alt)}</p></article>'
+            price_note = f'<p class="price">ab {E(item["preis_ab"])} € {E(item.get("preishinweis") or "")}</p>' if item.get('produktart') == 'spiegel' and item.get('preis_ab') else ''
+            gallery+=f'<article class="gallery-item" id="werk-{E(item['_id'])}"><a class="gallery-photo" href="{optimized["1200"]}" data-lightbox data-caption="{E(item_title)}" aria-label="{E(item_title)} vergrößern">{gallery_picture(item)}<span class="photo-arrow" aria-hidden="true">+</span></a><h3>{E(item_title)}</h3><p>{E(item_alt)}</p>{price_note}</article>'
         related=[p for p in PRODUCTS if p['material']==key]
         prices=''.join(f'<div><span>{E(p["title"])}</span><strong>ab {E(p["price"])} €</strong></div>' for p in related)
         if key == 'schiefer':

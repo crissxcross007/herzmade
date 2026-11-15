@@ -1,0 +1,16 @@
+{
+  "material": "glas",
+  "produktart": "spiegel",
+  "bild": "/images/glas/gravierter-spiegel-holzrahmen.jpeg",
+  "titel": "Gravierter Spiegel im flexiblen Holzrahmen",
+  "alt": "Ein Lieblingsfoto, ein persönlicher Moment oder ein Spruch: Wir gravieren dein Wunschmotiv auf einen Spiegel. Den flexiblen Holzrahmen lasern wir aus einem Stück.",
+  "anlaesse": [],
+  "in_ideen": false,
+  "preis_ab": "29,90",
+  "preishinweis": "Inklusive flexiblem Holzrahmen.",
+  "sortierung": -10,
+  "ideen_reihenfolge": 150,
+  "zuordnung_offen": false,
+  "anlass_notiz": "",
+  "_id": "glas-gravierter-spiegel-holzrahmen"
+}

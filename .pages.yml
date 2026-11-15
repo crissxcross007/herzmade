@@ -80,6 +80,8 @@ content:
         label: Untersetzer
       - name: weinglas
         label: Weinglas
+      - name: spiegel
+        label: Spiegel
       - name: windlicht
         label: Windlicht
       - name: laterne
