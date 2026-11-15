@@ -3,15 +3,15 @@
   "produktart": "holzarbeit",
   "bild": "/images/holz/feuerwehr-schwibbogen-forst.jpeg",
   "titel": "Ein Schwibbogen für die Freiwillige Feuerwehr",
-  "alt": "Wenn Feuerwehrliebe auf Weihnachtszauber trifft: Dieser beleuchtete Holz-Schwibbogen zeigt eine Einsatzszene mit Löschfahrzeug und Angriffstrupp. Auf dem Bogen steht der Name der jeweiligen Feuerwehr, darunter der Spruch „Gott zur Ehr, dem Nächsten zur Wehr!“ Ein kleines Detail für Kenner steckt auf dem Fahrzeug: Dort ist der Funkkenner der beschenkten Wehr eingraviert. Das gezeigte Exemplar trägt den Schriftzug der Freiwilligen Feuerwehr Forst (Lausitz).",
+  "alt": "Beleuchteter Schwibbogen mit individuellem Feuerwehrschriftzug und Funkkenner am Löschfahrzeug. Darunter steht „Gott zur Ehr, dem Nächsten zur Wehr!“",
   "anlaesse": [
     "weihnachten"
   ],
   "in_ideen": true,
-  "preis_ab": "",
-  "preishinweis": "Schriftzug und Funkkenner werden für deine Feuerwehr angepasst.",
+  "preishinweis": "Gezeigtes Beispiel: Freiwillige Feuerwehr Forst (Lausitz).",
   "sortierung": -10,
   "ideen_reihenfolge": 95,
   "zuordnung_offen": false,
-  "anlass_notiz": ""
+  "anlass_notiz": "",
+  "preis_fest": "49,90"
 }

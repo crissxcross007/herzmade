@@ -139,7 +139,10 @@ content:
     type: boolean
     default: false
   - name: preis_ab
-    label: Preis ab in Euro, z. B. 14,90 – leer bedeutet Preis auf Anfrage
+    label: Preis ab in Euro, z. B. 14,90
+    type: string
+  - name: preis_fest
+    label: Festpreis in Euro, z. B. 49,90 – hat Vorrang vor dem Ab-Preis
     type: string
   - name: preishinweis
     label: Was umfasst der Preis? Zum Beispiel Größe oder Material extra

@@ -27,6 +27,7 @@ for source in sorted((ROOT/'content/werke').glob('*.json')):
     assert work.get('bild') and (ROOT/work['bild'].lstrip('/')).is_file(), f'Bild fehlt: {source}'
     assert set(work.get('anlaesse') or []) <= set(OCCASIONS) | {'gedenken'}, f'Unbekannter Anlass: {source}'
     assert not work.get('preis_ab') or re.fullmatch(r'\d+(?:[,.]\d{1,2})?', str(work['preis_ab'])), f'Ungültiger Ab-Preis: {source}'
+    assert not work.get('preis_fest') or re.fullmatch(r'\d+(?:[,.]\d{1,2})?', str(work['preis_fest'])), f'Ungültiger Festpreis: {source}'
     WORKS.append(work)
 for key in MATERIALS:
     DATA[key]['galerie'] = sorted([w for w in WORKS if w['material'] == key], key=lambda w: (w.get('sortierung', 100), w['_id']))
@@ -142,15 +143,22 @@ def build_home():
     <section class="about-band"><div class="wrap about-grid"><p class="eyebrow">Zwei Köpfe. Viele Ideen.</p><div><h2>Vater, Sohn<br>und ein Herzensprojekt.</h2><p>Wir sind Chris und Levi aus Döbern. Bei Herzmade verbinden wir Technik, Kreativität und unsere Freude an persönlichen Geschenken.</p><a class="text-link" href="about.html">Lerne uns kennen <span aria-hidden="true">↗</span></a></div></div></section>{cta()}'''
     page('index.html','Herzmade – persönliche Geschenke & Gravuren aus Döbern','Individuelle Geschenkideen aus Holz, Glas, Schiefer und Edelstahl. Persönlich graviert von Chris und Levi aus Döbern in der Lausitz.',content,'home')
 
+def work_price_label(work):
+    fixed_price = work.get('preis_fest')
+    price = str(fixed_price or work.get('preis_ab') or '').replace('.', ',')
+    if not price:
+        return 'Preis auf Anfrage'
+    euros, _, cents = price.partition(',')
+    prefix = '' if fixed_price else 'ab '
+    return f'{prefix}{E(euros)},{E(cents.ljust(2, "0"))} €'
+
+
 def work_card(work, remembrance=False):
     title = clean(work['titel'])
     alt = clean(work.get('alt') or title)
     optimized = optimize(work['bild'])
     target = 'weihnachtsbaumkugeln.html' if work.get('produktart') == 'weihnachtskugel' else work['material']+'.html'
-    price = str(work.get('preis_ab') or '').replace('.', ',')
-    if price and ',' not in price:
-        price += ',00'
-    price_label = 'ab '+E(price)+' €' if price else 'Preis auf Anfrage'
+    price_label = work_price_label(work)
     link_label = 'Alle Weihnachtskugeln ansehen' if work.get('produktart') == 'weihnachtskugel' else 'Dieses Werk in der Materialgalerie'
     return f'''<article class="product work-card" id="idee-{E(work['_id'])}" data-occasions="{E(' '.join(work.get('anlaesse') or []))}"><a class="product-photo" href="{optimized['1200']}" data-lightbox data-caption="{E(title)}" aria-label="{E(title)} vergrößern">{gallery_picture(work)}<span class="photo-arrow" aria-hidden="true">+</span></a><p class="work-material">{E(MATERIALS[work['material']])}</p><div class="product-top"><h3>{E(title)}</h3><p class="price">{price_label}</p></div><p>{E(alt)}</p><p class="product-detail">{E(work.get('preishinweis') or 'Größe, Gestaltung und Preis stimmen wir persönlich mit dir ab.')}</p><a class="text-link" href="{target}#werk-{E(work['_id'])}">{link_label} <span aria-hidden="true">↗</span></a></article>'''
 
@@ -197,6 +205,9 @@ def build_materials():
                 prices += f'<div><span>Gravierter Spiegel inkl. flexiblem Holzrahmen</span><strong>ab {E(mirror["preis_ab"])} €</strong></div>'
             price_note = 'Inklusive Material und Gravur. Bei Glasmedaillen sind auch Band und Grafikerstellung enthalten.'
         if key == 'holz':
+            arch = next((item for item in data.get('galerie') or [] if item['_id'] == 'holz-feuerwehr-schwibbogen-forst'), None)
+            if arch and arch.get('preis_fest'):
+                prices += f'<div><span>Feuerwehr-Schwibbogen</span><strong>{work_price_label(arch)}</strong></div>'
             price_note = 'Flaschenöffner, Holzostereier und Brettchen inklusive Material und Gravur. Holz-Cut-Arbeiten ab 4,90 € zuzüglich Material.'
         if key == 'leder':
             prices = '<div><span>Gravurarbeit auf Leder</span><strong>ab 9,00 €</strong></div>'
