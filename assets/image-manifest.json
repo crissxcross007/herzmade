@@ -327,6 +327,14 @@
     "width": 644,
     "height": 859
   },
+  "images/holz/feuerwehr-schwibbogen-forst.jpeg": {
+    "600": "assets/img/46d4879ae6f8-600.webp",
+    "w600": 600,
+    "1200": "assets/img/46d4879ae6f8-1200.webp",
+    "w1200": 1200,
+    "width": 1536,
+    "height": 1152
+  },
   "images/glas/2025-11-2216-50-59948.jpg": {
     "600": "assets/img/53071594c51c-600.webp",
     "w600": 450,
@@ -374,6 +382,14 @@
     "w1200": 1200,
     "width": 1527,
     "height": 859
+  },
+  "images/glas/gravierter-spiegel-holzrahmen.jpeg": {
+    "600": "assets/img/7504f15fc4bf-600.webp",
+    "w600": 600,
+    "1200": "assets/img/7504f15fc4bf-1200.webp",
+    "w1200": 1200,
+    "width": 1536,
+    "height": 1152
   },
   "images/holz/holzscheibe-wappen.jpg": {
     "600": "assets/img/29a7bb9fda29-600.webp",
@@ -462,14 +478,6 @@
     "w1200": 900,
     "width": 3024,
     "height": 4032
-  },
-  "images/glas/gravierter-spiegel-holzrahmen.jpeg": {
-    "600": "assets/img/7504f15fc4bf-600.webp",
-    "w600": 600,
-    "1200": "assets/img/7504f15fc4bf-1200.webp",
-    "w1200": 1200,
-    "width": 1536,
-    "height": 1152
   },
   "images/glas/weihnachtskugel-fotogravur-gold-einschulung.jpeg": {
     "600": "assets/img/9d23ec8b64c5-600.webp",
