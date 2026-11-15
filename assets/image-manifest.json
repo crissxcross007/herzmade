@@ -463,6 +463,14 @@
     "width": 3024,
     "height": 4032
   },
+  "images/glas/gravierter-spiegel-holzrahmen.jpeg": {
+    "600": "assets/img/7504f15fc4bf-600.webp",
+    "w600": 600,
+    "1200": "assets/img/7504f15fc4bf-1200.webp",
+    "w1200": 1200,
+    "width": 1536,
+    "height": 1152
+  },
   "images/glas/weihnachtskugel-fotogravur-gold-einschulung.jpeg": {
     "600": "assets/img/9d23ec8b64c5-600.webp",
     "w600": 450,
