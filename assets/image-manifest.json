@@ -383,14 +383,6 @@
     "width": 1536,
     "height": 1152
   },
-  "images/holz/holzscheibe-wappen.jpg": {
-    "600": "assets/img/29a7bb9fda29-600.webp",
-    "w600": 450,
-    "1200": "assets/img/29a7bb9fda29-1200.webp",
-    "w1200": 900,
-    "width": 1152,
-    "height": 1536
-  },
   "images/holz/holzbrett-portraet.jpg": {
     "600": "assets/img/b75aedd1a0ea-600.webp",
     "w600": 600,
