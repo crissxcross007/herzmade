@@ -1,0 +1,17 @@
+{
+  "material": "holz",
+  "produktart": "holzarbeit",
+  "bild": "/images/holz/schwibbogen-forst-geraetehaeuser-mitte-sued.jpeg",
+  "titel": "Forster Feuerwehrgerätehäuser im Lichterbogen",
+  "alt": "Die Feuerwehrgerätehäuser Mitte und Süd in Forst (Lausitz), vereint in einem Schwibbogen aus Holz. Ein LED-Strip setzt die fein gravierten Gebäude und das Forster Wappen in warmes Licht.",
+  "anlaesse": [
+    "weihnachten"
+  ],
+  "in_ideen": true,
+  "preis_fest": "49,90",
+  "preishinweis": "Inklusive LED-Strip-Beleuchtung.",
+  "sortierung": -11,
+  "ideen_reihenfolge": 94,
+  "zuordnung_offen": false,
+  "anlass_notiz": ""
+}
